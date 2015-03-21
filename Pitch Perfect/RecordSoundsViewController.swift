@@ -15,8 +15,8 @@ class RecordSoundsViewController: UIViewController,AVAudioRecorderDelegate {
     @IBOutlet weak var stopButton: UIButton!
     @IBOutlet weak var recordButton: UIButton!
     
-    var audioRecorder:AVAudioRecorder!
-    var recordedAudio:RecordedAudio!
+    var audioRecorder: AVAudioRecorder!
+    var recordedAudio: RecordedAudio!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,7 +79,6 @@ class RecordSoundsViewController: UIViewController,AVAudioRecorderDelegate {
         }
     }
     @IBAction func stopRecording(sender: UIButton) {
-        recordingInProgress.text = "Tap to Record";
         audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error: nil)
